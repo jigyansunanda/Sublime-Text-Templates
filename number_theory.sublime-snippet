@@ -1,0 +1,63 @@
+<snippet>
+    <content><![CDATA[int fastExp(int a, int b) {
+    int res = 1;
+    while (b > 0) {
+        if (b & 1) {
+            res = res * a;
+        }
+        a = a * a;
+        b = b >> 1;
+    }
+    return res;
+}
+
+int fastExp(int a, int b, int MOD) {
+    int res = 1;
+    a %= MOD;
+    while (b > 0) {
+        if (b & 1) {
+            res = (res * a) % MOD;
+        }
+        a = (a * a) % MOD;
+        b = b >> 1;
+    }
+    return res;
+}
+
+int exGCD(int a, int b, int &x, int &y) {
+    if (b == 0) {
+        x = 1;
+        y = 0;
+        return a;
+    }
+    int x1, y1;
+    int _gcd = exGCD(b, a % b, x1, y1);
+    x = y1;
+    y = x1 - (y1 * (a / b));
+    return _gcd;
+}
+
+int modInv(int a, int MOD) {
+    int x, y;
+    int _gcd = exGCD(a, MOD, x, y);
+    if (_gcd != 1) {
+        cout << "a and MOD are NOT coprime"
+             << "\n";
+        return -1;
+    } else {
+        return (x % MOD + MOD) % MOD;
+    }
+}
+
+int modInvFormat(int a, int MOD) {
+    return fastExp(a, MOD - 2, MOD);
+} // assert MOD is prime
+
+$0
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>number-theory</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

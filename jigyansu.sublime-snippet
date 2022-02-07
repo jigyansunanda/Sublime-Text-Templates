@@ -1,0 +1,83 @@
+<snippet>
+    <content><![CDATA[#include "bits/stdc++.h"
+// #include <ext/pb_ds/assoc_container.hpp>
+// #include <ext/pb_ds/tree_policy.hpp>
+
+using namespace std;
+// using namespace __gnu_pbds;
+
+#define sz(x) (int)(x).size()
+#define int long long
+#define mp make_pair
+#define pb push_back
+#define f first
+#define s second
+#define skip continue
+#define lb lower_bound
+#define ub upper_bound
+#define all(x) x.begin(), x.end()
+#define PI 3.141592653589793238462
+
+typedef vector<int> vi;
+typedef long double ld;
+typedef pair<int, int> pii;
+typedef vector<vector<int>> vvi;
+
+#define fr(i, n) for (int i = 0; i < (int)n; i++)
+#define frr(i, a, b) for (int i = (int)a; i <= (int)b; i++)
+#define fro(i, a, b) for (int i = (int)a; i >= (int)b; i--)
+
+int gcd(int a, int b) { return (b) ? gcd(b, a % b) : a; }
+int lcm(int a, int b) { return a * b / gcd(a, b); }
+
+int max(int a, int b) { return (a >= b) ? a : b; }
+int min(int a, int b) { return (a <= b) ? a : b; }
+
+void fileio() {
+#ifndef ONLINE_JUDGE
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+#endif
+}
+
+template <class T> using hst = unordered_set<T>;
+template <class T> using hmp = unordered_map<T, T>;
+template <class T> using maxheap = priority_queue<T>;
+template <class T> using minheap = priority_queue<T, vector<T>, greater<T>>;
+template <class T> istream &operator>>(istream &is, vector<T> &V) {
+    for (auto &e : V) {
+        is >> e;
+    }
+    return is;
+}
+
+const char nl = '\n';
+const int inf = 1e17;
+const int ninf = -1e17;
+const int mod = 1000000007;
+const int mod2 = 998244353;
+
+int _cases = 1;
+
+/* ----------------------------( solution )---------------------------- */
+
+void run_test(int _case = 1) {
+    //$0
+}
+
+signed main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    fileio();
+    // cin >> _cases;
+    for (int _case = 1; _case <= _cases; ++_case) {
+        run_test(_case);
+    }
+    return 0;
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>jigyansu</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>
