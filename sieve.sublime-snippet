@@ -1,0 +1,26 @@
+<snippet>
+    <content><![CDATA[
+const int sz = 1e6 + 1;
+vector<bool> isPrime(sz, 1);
+vector<int> primes;
+
+void sieve() {
+    isPrime[0] = isPrime[1] = 0;
+    for (int i = 2; i < sz; i++) {
+        if (isPrime[i]) {
+            primes.push_back(i);
+            for (int j = 2 * i; j < sz; j += i) {
+                isPrime[j] = 0;
+            }
+        }
+    }
+}
+
+$0
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>sieve</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>
