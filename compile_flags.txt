@@ -1,0 +1,5 @@
+-std=c++2a
+-D__ON_MAC__
+-Wall
+-Wextra
+-fsanitize=address
