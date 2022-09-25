@@ -1,0 +1,24 @@
+{ 
+    "clients": { 
+        "clangd": { 
+            "enabled": true, 
+            "command": [ "/usr/bin/clangd", "-function-arg-placeholders=0", "-header-insertion-decorators=1", "-index"], 
+            "scopes": ["source.c", "source.c++", "source.objc", "source.objc++"], 
+            "syntaxes": [ "Packages/C++/C.sublime-syntax", "Packages/C++/C++.sublime-syntax", "Packages/Objective-C/Objective-C.sublime-syntax", "Packages/Objective-C/Objective-C++.sublime-syntax", ], 
+            "languageId": "cpp", 
+        },
+    },
+
+    "show_diagnostics_panel_on_save": 4,
+    "diagnostics_panel_include_severity_level": 4,
+    "show_diagnostics_severity_level": 4,
+    "show_diagnostics_count_in_view_status": true,
+    "link_highlight_style": "none",
+    "inhibit_snippet_completions": false,
+    "lsp_code_actions_on_save": {
+        "source.organizeImports": true,
+        "source.fixAll": true,
+    },
+    "inhibit_snippet_completions": false,
+    "inhibit_word_completions": true,
+}
